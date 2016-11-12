@@ -8,8 +8,8 @@ module.exports = {
     loaders:[
       {
         test: /.\js/,
-        loader: 'babel',
-        include: __dirname + '/src'
+        loader: 'babel-loader',
+        exclude: /node_modules/
       }
     ]
   }
