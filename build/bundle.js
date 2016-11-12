@@ -44,14 +44,21 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	var _alert = __webpack_require__(1);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
+	var _app = __webpack_require__(2);
+
+	var _app2 = _interopRequireDefault(_app);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var element = '\n  <div class="element">\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur laudantium recusandae itaque libero velit minus ex reiciendis veniam. Eligendi modi sint delectus beatae nemo provident ratione maiores, voluptatibus a tempore!</p>\n  </div>\n';
+	console.log(_app2.default);
+	document.write(element);
 	document.write((0, _alert2.default)("Affirmative", "Jack"));
 
 /***/ },
@@ -71,6 +78,12 @@
 	};
 
 	exports.default = greetings;
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);
