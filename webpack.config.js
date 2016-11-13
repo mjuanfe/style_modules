@@ -1,10 +1,15 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+let extractCSS = new ExtractTextPlugin('./css/[name].css');
 
 module.exports = {
-  entry: './src',
+  entry: {
+    app: './src/index.js',
+
+  },
   output: {
-    path: 'build',
-    filename: 'bundle.js',
+    path: './build',
+    filename: './js/[name].js',
   },
   module: {
     loaders:[
@@ -15,11 +20,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract("css")
+        loader: extractCSS.extract("css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]")
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin("styles.css")
+    extractCSS
   ]
 };
